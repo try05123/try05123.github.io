@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Primary Meta Tags -->
+    <title>產品列表頁</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="120x120" href="../layout/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../layout/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../layout/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="../layout/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
+
+    <!-- Fontawesome -->
+    <link type="text/css" href="../layout/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link type="text/css" href="../layout/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Notyf -->
+    <link type="text/css" href="../layout/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="../layout/css/volt.css" rel="stylesheet">
+    <link type="text/css" href="../layout/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+        <a class="navbar-brand me-lg-5" href="../../index.html">
+            <span class="mt-1 ms-1 sidebar-text">網站管理系統</span>
+        </a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+        <div class="sidebar-inner px-4 pt-3">
+            <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+                <!--mobile-->
+                <div class="d-flex align-items-center">
+                    <!-- <div class="avatar-md me-4">
+                        <i class="fa-sharp fa-regular fa-user fa-3x"></i>
+                    </div>
+                    <div class="d-block">
+                        <h2 class="h5 mb-3">Hi, Eva</h2>
+                        <a href="../../pages/examples/sign-in.html"
+                            class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+                            <span class="sidebar-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                            登出
+                        </a>
+                    </div> -->
+                </div>
+                <div class="collapse-close d-md-none">
+                    <a href="#sidebarMenu" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+                        aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav flex-column pt-3 pt-md-0">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link d-flex align-items-center">
+                        <!--更換-->
+                        <!-- <span class="sidebar-icon">
+                            <img src="../layout/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+                        </span> -->
+                        <span class="mt-1 ms-1 sidebar-text">網站管理系統</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse" data-bs-target="#submenu-sys">
+                        <span>
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span class="sidebar-text">系統管理</span>
+                        </span>
+                        <span class="link-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </span>
+                    <div class="multi-level collapse" role="list" id="submenu-sys" aria-expanded="false">
+                        <ul class="flex-column nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../content/account_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-user-gear"></i>
+                                    </span>
+                                    <!-- <span class="sidebar-text-contracted">表格</span> -->
+                                    <span class="sidebar-text">帳號管理</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../content/log_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </span>
+                                    <!-- <span class="sidebar-text-contracted">表格</span> -->
+                                    <span class="sidebar-text">系統紀錄</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse" data-bs-target="#submenu-brand-A" aria-expanded="true">
+                        <span>
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-list"></i>
+                            </span>
+                            <span class="sidebar-text">A 品牌</span>
+                        </span>
+                        <span class="link-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </span>
+                    <div class="multi-level collapse show" role="list" id="submenu-brand-A" aria-expanded="false">
+                        <ul class="flex-column nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../content/analysis_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-table-list"></i>
+                                    </span>
+                                    <span class="sidebar-text">資料分析</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../content/product_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-table-list"></i>
+                                    </span>
+                                    <span class="sidebar-text">產品</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse" data-bs-target="#submenu-brand-B">
+                        <span>
+                            <span class="sidebar-icon">
+                                <i class="fa-solid fa-list"></i>
+                            </span>
+                            <span class="sidebar-text">B 品牌</span>
+                        </span>
+                        <span class="link-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </span>
+                    <div class="multi-level collapse" role="list" id="submenu-brand-B" aria-expanded="false">
+                        <ul class="flex-column nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../content/analysis_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-table-list"></i>
+                                    </span>
+                                    <span class="sidebar-text">資料分析</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../content/product_list.html">
+                                    <span class="sidebar-icon">
+                                        <i class="fa-solid fa-table-list"></i>
+                                    </span>
+                                    <span class="sidebar-text">產品</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+
+                <li class="nav-item">
+                    <a href="../pages/transactions.html" class="nav-link">
+                        <span class="sidebar-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        <span class="sidebar-text">登出</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+            <div class="container-fluid px-0">
+                <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+                    <div class="d-flex align-items-center">
+                        <button id="sidebar-toggle" class="sidebar-toggle me-3 btn btn-icon-only d-none d-lg-inline-block align-items-center justify-content-center"><svg class="toggle-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+                    </div>
+                    <!-- Navbar links -->
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item dropdown ms-lg-3">
+                            <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="media d-flex align-items-center">
+                                    <img class="avatar-sm" alt="Image placeholder" src="../layout/images/user.png">
+                                    <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                        <span class="mb-0 font-small fw-bold text-gray-900">Eva</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <span class="sidebar-icon"><i class="fa-solid fa-key"></i></span>
+                                    修改密碼
+                                </a>
+                                <!-- <div role="separator" class="dropdown-divider my-1"></div>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <span class="sidebar-icon"><i class="fa-solid fa-arrow-right-from-bracket" style="color:red"></i></span>
+                                    登出
+                                </a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!--content-->
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3">
+            <div class="d-block mb-2 mb-md-0">
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                        <li class="breadcrumb-item">
+                            <a href="#">
+                                <!-- <i class="fa-solid fa-house"></i> -->
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">A 品牌</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">產品</li>
+                    </ol>
+                </nav>
+                <h2 class="h4">產品</h2>
+                <!-- <p class="mb-0">Your web analytics dashboard template.</p> -->
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3">
+            <div class="btn-toolbar me-2 mb-2 mb-md-0">
+                <a href="#" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center">
+                    <i class="fa-solid fa-plus fa-1xl me-2"></i>新增
+                </a>
+            </div>
+            <div class="d-flex flex-fill justify-content-end align-items-center mb-2">
+                <div class="input-group fmxw-300">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button type="button" class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body border-0 shadow table-wrapper table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="border-gray-200">項次</th>
+                        <th class="border-gray-200">產品名稱</th>
+                        <th class="border-gray-200 date">新增日期</th>
+                        <th class="border-gray-200 date">修改日期</th>
+                        <th class="border-gray-200 action">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            1
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            2
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            3
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            4
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            5
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            6
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            7
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            8
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            9
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Item -->
+                    <tr>
+                        <td class="no">
+                            10
+                        </td>
+                        <td class="link">
+                            <a href="../content/product_cont.html">
+                                <span>洗面乳</span>
+                            </a>
+                        </td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="date"><span>2023-02-12 00:00</span></td>
+                        <td class="project-actions action">
+                            <a class="btn btn-danger btn-sm-1" href="#">
+                                <i class="fas fa-trash"></i>
+                                刪除
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row justify-content-between" style="flex-wrap: wrap">
+                <div class="fw-normal small mt-4 mt-lg-0">共 58 筆資料，目前顯示第 1 ~ 10 筆</div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pagination-sm mb-0">
+                        <li class="page-item">
+                            <a class="page-link" href="#">第一頁</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">上一頁</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">5</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">6</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">7</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">8</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">9</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">10</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">下一頁</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">最末頁</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!--content-->
+        
+        <footer class="p-3 mb-4 mt-4">
+            <div class="row">
+                <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
+                    <p class="mb-0 text-center text-lg-start">© 2003-<span class="current-year"></span> ASAX
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Core -->
+    <script src="../layout/vendor/jquery/jquery-3.6.3.min.js"></script>
+    <script src="../layout/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Sweet Alerts 2 -->
+    <script src="../layout/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+    <!-- JS -->
+    <script src="../layout/js/main.js"></script>
+</body>
+
+</html>
