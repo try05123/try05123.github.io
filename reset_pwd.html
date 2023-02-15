@@ -45,10 +45,13 @@
                         </a>-->
                 </p>
                 <div class="row justify-content-center form-bg-image" data-background-lg="./layout/assets/img/illustrations/signin.svg">
+                    <p class="text-center">
+                        <a href="javascript:history.back();" class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-left-long me-2"></i>回上一頁</a>
+                    </p>
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
-                                <h1 class="mb-0 h3">登入管理系統</h1>
+                                <h1 class="mb-0 h3">修改密碼</h1>
                             </div>
                                 <!-- Form -->
                                 <div class="form-group mb-4">
@@ -57,7 +60,8 @@
                                         <span class="input-group-text">
                                             <i class="fa-solid fa-user fa-lg"></i>
                                         </span>
-                                        <input type="text" name="Email" class="form-control" placeholder="使用者帳號" autofocus required />
+                                        <span class="form-control">admin</span>
+                                        <!-- <input type="text" class="form-control" value="網站平台管理員 admin"> -->
                                     </div>
                                     <div class="col-md-10">
                                     </div>
@@ -66,28 +70,29 @@
                                 <div class="form-group">
                                     <!-- Form -->
                                     <div class="form-group mb-4">
-                                        <label for="password">使用者密碼</label>
+                                        <label for="password">密碼</label>
                                         <div class="input-group">
                                             <span class="input-group-text">
                                                 <i class="fa-solid fa-lock fa-lg"></i>
                                             </span>
-                                            <input type="password" name="Password" class="form-control" placeholder="使用者密碼" required />
+                                            <input type="password" name="Password" class="form-control" placeholder="密碼" required />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">驗證碼</label>
-                                    <div class="input-group mb-4">
-                                        <span class="input-group-text">
-                                            <!--<i class="fa-solid fa-shield fa-lg"></i>-->
-                                            <i class="fa-solid fa-fingerprint fa-lg"></i>
-                                        </span>
-                                        <input type="text" name="VerifyCode" class="form-control" placeholder="驗證碼" required />
-                                        <img id="valiCode" src="./layout/images/RandomCode.png" title="驗證碼" style="cursor: pointer;height: 35px;" class="verify_code" />
+                                    <!-- Form -->
+                                    <div class="form-group mb-4">
+                                        <label for="password">確認密碼</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-lock fa-lg"></i>
+                                            </span>
+                                            <input type="password" name="Password" class="form-control" placeholder="確認密碼" required />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-gray-800" onclick="location.href='./index.html'">登入系統</button>
+                                    <button type="submit" class="btn btn-gray-800" onclick="location.href='./index.html'">確認修改</button>
                                 </div>
                         </div>
                     </div>
